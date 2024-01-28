@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page-crudSmarthphone{% endblock %}
+
+{% block body %}
+ 
+  <h3> liste des commentaires</h3>
+ 
+
+
+
+<table class="table text-center  container rounded ">
+ <label for="site-search"></label>
+<input  class="barDeRecherche" type="search" id="site-search" name="q" placeholder="recherche..."/><i class="fa-solid fa-magnifying-glass"></i>
+  <thead >
+    <tr class="">
+      <th scope="col">#id</th>
+      <th scope="col">Commetaires</th>
+      <th scope="col">Note</th>
+      <th scope="col">Date</th>
+      <th scope="col">Option</th>
+    </tr>
+  </thead>
+  {% for Commentaires in Commentaire %}
+  <tbody>
+    <tr >
+      <td>{{Commentaires.id}}</td>
+      <td>{{Commentaires.Commentaire}}</td>
+      <td>{{Commentaires.note}}</td>
+      <td>{{Commentaires.CreateAT|date("m/d/Y")}}</td>
+      <td cla="d-flex container">
+      <a class="bg-danger text-dark p-1 rounded bg-opacity-75 " href="{{path('delete_commentaire_produits' ,{id: Commentaires.id})}}">supprimer <i class="fa-solid fa-trash-can text-light ms-1"></i></a>
+      </td>
+    </tr>
+   
+  </tbody>
+ {% endfor %}
+</table>
+
+     {# display navigation #}
+<div class="navigation d-flex justify-content-center mt-3">
+    {{knp_pagination_render(Commentaire)}}
+</div>
+{% endblock %}

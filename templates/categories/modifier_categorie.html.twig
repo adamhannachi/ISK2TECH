@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page-crudSmarthphone{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="grid">
+<h4> formulaire Modifier Accessoire</h4>
+<div class="text-center ms-5">
+{{ form_start(formCategorie) }}
+
+<div class="col-md-6 m-5">
+<h6 class="ms-0"> Modifier la Marque</h6>
+{{ form_row(formCategorie.Nom) }}
+</div>
+<div class="col-md-6 m-5">
+{{ form_row(formCategorie.submit) }}
+</div>
+{{ form_end(formCategorie) }}
+</div>
+</div>
+</div>
+{% endblock %}

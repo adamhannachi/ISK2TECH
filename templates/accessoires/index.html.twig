@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page Produits{% endblock %}
+
+{% block body %}
+
+ <div class=" mt-5 text-center ">
+  <h1 class="title-page-smartphone"><span class="text-light"> ISK</span>2<span class="text-danger">TECH</span><span class="text-light"> Accessoires</span></h1>
+ </div>
+
+ <div class="container text-center ">
+
+
+  <div class=" card-container row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+<!-- j'ai inclu card avec une boucle -->
+{% for Accessoires in Accessoire %}
+  {% include 'accessoires/card.html.twig' with {Accessoires: Accessoires} only %}
+{% endfor %}
+   </div>
+
+  </div>
+
+     {# display navigation #}
+<div class="navigation d-flex justify-content-center mt-3">
+    {{knp_pagination_render(Accessoire)}}
+</div>
+{% endblock %}

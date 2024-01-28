@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page détails de produit{% endblock %}
+
+{% block body %}
+ 
+ 
+<div class="container text-center container-details-Produits">
+<h2 class="">Détails de produit</h2>
+  <div class="row">
+    <div class="col order-first zone-1">
+     <h5> {{Ordinateur.nom}}</h5>
+
+    <img  style ="width:150px"src="{{vich_uploader_asset(Ordinateur,'imageFile')}}" class="card-img-top" alt="...">
+      <p>{{Ordinateur.prix}}</p>
+      <div> <a href="" class="btn btn-primary btn-sm">Ajouter au panier</a></div>
+    </div>
+    <!---->
+    <div class="col zone-2">
+     <h3>caracterstique</h5>
+      <h5 class="text-start">Taille d'écran</h3>
+      <div class="text-start text-light">{{Ordinateur.tailleEcran}}</div>
+      <hr>
+      <h5 class="text-start">Système d'exploitation</h3>
+      <div class="text-start text-light">{{Ordinateur.systemeExploitation}}</div>
+        <hr>
+      <h5 class="text-start">Photo & Video</h3>
+      <div class="text-start text-light">{{Ordinateur.photoVideo}}</div>
+        <hr>
+       <h5 class="text-start">Batterie</h3>
+      <div class="text-start text-light">{{Ordinateur.batterie}}</div>
+        <hr>
+       <h5 class="text-start">Connectivité</h3>
+      <div class="text-start text-light">{{Ordinateur.connectivite}}</div>
+    </div>
+   
+  </div>
+</div>
+
+{% endblock %}

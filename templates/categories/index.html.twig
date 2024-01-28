@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page-crudSmarthphone{% endblock %}
+
+{% block body %}
+ 
+  <h3> liste des Gatégories</h3>
+
+
+<table class="table text-center  container rounded ">
+ <label for="site-search"></label>
+<input  class="barDeRecherche" type="search" id="site-search" name="q" placeholder="recherche..."/><i class="fa-solid fa-magnifying-glass"></i>
+
+  <thead >
+    <tr class="">
+      <th scope="col">#id</th>
+      <th scope="col">Model de produit </th>
+      <th scope="col">Date de création </th>
+      <th scope="col">Option</th>
+    </tr>
+  </thead>
+ 
+ {% for Categories in Categorie %}
+  <tbody>
+    <tr >
+      <td>{{Categories.id}}</td>
+      <td>{{Categories.nom}}</td>
+      <td>cell</td>
+      <td cla="d-flex container">
+      <a class="bg-success text-dark p-1 rounded bg-opacity-75 me-1" href="{{path('modifier_categorie',{id: Categories.id})}}">modifier <i class="fa-regular fa-pen-to-square text-light ms-1"></i></a>
+      <a class="bg-danger text-dark p-1 rounded bg-opacity-75 " href="{{path('delete_categorie' ,{id: Categories.id})}}">supprimer <i class="fa-solid fa-trash-can text-light ms-1"></i></a>
+      <a class="bg-dark text-light p-1 rounded bg-opacity-75 " href="{{path('creer_categorie')}}">créer<i class="fa-solid fa-trash-can text-light ms-1"></i></a>
+      </td>
+    </tr>
+   
+  </tbody>
+ {% endfor %}
+</table>
+
+     {# display navigation #}
+<div class="navigation d-flex justify-content-center mt-3">
+    {{knp_pagination_render(Categorie)}}
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page-crudSmarthphone{% endblock %}
+
+{% block body %}
+
+<div class="container  ">
+  <h4>POster votre avis </h4>
+{{ form_start(formCommentaire) }}
+
+{{ form_row(formCommentaire.commentaire)}}
+
+<div class="d-flex gap-2">
+{{ form_row(formCommentaire.Note) }}
+{{ form_row(formCommentaire.submit) }}
+</div>
+
+
+{{ form_end(formCommentaire) }}
+
+  
+  {{Commentaire.Commentaire}} 
+  {{Commentaire.note}}
+  
+
+</div>
+ 
+{% endblock %}

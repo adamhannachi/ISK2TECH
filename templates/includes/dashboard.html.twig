@@ -1,0 +1,15 @@
+{% extends 'base_U.html.twig' %}
+
+{% block body %}
+
+
+ {% if is_granted('ROLE_ADMIN') %}
+<a class=" btn btn-warning text-dashboard m-4" href="{{path('app_dashboard')}}">Dashboard  <i class="fa-solid fa-gears" style="color: #400000;"></i></a>
+
+<div class="dash">
+ 
+
+
+</div>
+{% endif %}
+{% endblock %}

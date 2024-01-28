@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page détails de produit{% endblock %}
+
+{% block body %}
+
+<div class="container text-center container-details-Produits">
+<h2 class="">Détails de produit</h2>
+
+  <div class="row">
+    <div class="col order-first zone-1">
+     <h5> {{SmartPhone.nom}}</h5>
+    <img  style ="width:150px"src="{{vich_uploader_asset(SmartPhone,'imageFile')}}" class="card-img-top" alt="...">
+      
+      <p class="text-danger">{{SmartPhone.prix}} <span class="text-dark">€</span></p>
+      <div> <a href="" class="btn btn-primary btn-sm">Ajouter au panier</a></div>
+    </div>
+    <!---->
+    <div class="col zone-2"> <h3>caracterstique</h3>
+    <h5 class="text-start">Taille d'écran</h5>
+      <div class="text-start text-light">{{SmartPhone.tailleEcran}}</div>
+      <hr>
+      <h5 class="text-start">Système d'exploitation</h3>
+      <div class="text-start text-light">{{SmartPhone.systemeExploitation}}</div>
+        <hr>
+      <h5 class="text-start">Photo & Video</h3>
+      <div class="text-start text-light"> Résolution :<span>{{SmartPhone.photoVideo}}</span></div>
+        <hr>
+       <h5 class="text-start">Batterie</h3>
+      <div class="text-start text-light">{{SmartPhone.batterie}}</div>
+        <hr>
+       <h5 class="text-start">Connectivité</h3>
+      <div class="text-start text-dark"> Norme WiFi : <span class="">{{SmartPhone.connectivite}}</span></div>
+      </div>
+    </div>
+   
+  </div>
+  
+</div>
+
+{% endblock %}

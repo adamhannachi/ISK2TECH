@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block body %}
+
+<div class="container ">
+<div class="grid">
+<div class="dashboard"> 
+
+<div class="bar">
+<h5 class="titre-dashboard">dashboard </h5>
+<a class="link " href="{{path("app_categories")}}"><i class="fa-solid fa-list" style="color: #599ca6;"></i>  gestion des catégories</a>
+<a class="link " href="{{path("app_crud_smart_phone")}}"><i class="fa fa-mobile"style="color:#bdc00a ; "aria-hidden="true"></i>  gestion des smartPhones </a>
+<a class="link " href="{{path("app_crud_ordinateur")}}"><i class="fa-solid fa-laptop" style="color: #ffffff;"></i>  gestion des ordinateurs </a>
+<a class="link " href="{{path("app_accessoire")}}"><i class="fa-solid fa-border-all" style="color: #599ca6;"></i>  gestion des accessoires</a>
+<a class="link " href="{{path("app_crud_user")}}"><i class="fa-solid fa-user" style="color: #ff0000;"></i>  gestion des utlisateur</a>
+</div>
+
+<div class="container-gestion">
+
+<small>
+
+<h3 > bienvenue dans la page de gestion <span class="text-danger"> ISk2</span> TECH</h3>
+</small>
+
+
+</div>
+
+</div>
+</div>
+</div>
+{% endblock %}

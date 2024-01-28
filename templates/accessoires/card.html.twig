@@ -1,0 +1,22 @@
+{% extends 'base_U.html.twig' %}
+
+{% block title %}card{% endblock %}
+{% block body %}
+
+   <div class="card">
+  <h6 class=" text-center"> {{Accessoires.nom}}</h6>  <!-- Nom de produit-->
+ <img  style ="width:150px"src="{{vich_uploader_asset(Accessoires,'imageFile')}}" class="card-img-top" alt="...">
+  <p>{{Accessoires.couleur}}</p>  <!-- systemeExploitation de produit-->
+  <p class="text-danger ">{{Accessoires.prix | number_format(0,',',)}} <span class="text-dark">€</span></p>  <!-- prix de produit-->
+    <a class="btn-acherter" href="{{path("app_rajouter" , {id: Accessoires.id})}}">Ajouter au panier</a>
+   <span class="block-icons">
+      <a class="btnMessage" href="{{path("creer_commentaire")}}"><i class="fa-regular fa-comment-dots fa-beat-fade style-icons" style="color: #000000;"></i></a>
+      <a href="{{path('details_produits_accessoire', {id: Accessoires.id})}}"><i class="fa-solid fa-plus fa-fade style-icons" style="color: #126c02;"></i></a>
+      <a href=""><i class="fa-regular fa-heart fa-beat-fade style-icons" style="color: #ff0000;"></i></a>
+    </span>
+    <div >
+  
+    </div>
+  </div> 
+{% endblock %}
+

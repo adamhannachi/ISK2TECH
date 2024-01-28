@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-projet">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><span class="text-light">ISK2</span><span class="text-danger">TECH</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+           <a class="nav-link text-navbar" href="{{path("app_page_accueil")}}">ACCUEIL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-navbar" href="#">QUI-SOMMES NOUS</a>
+        </li>
+          <li class="nav-item">
+             <a class="nav-link text-navbar" href="{{path("creer_email")}}">Contacter-nous<i class="fa-regular fa-envelope text-dark"></i></a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-navbar" href="{{path("app_panier")}}">Panier<i class="fa-solid fa-cart-shopping text-dark"></i></a>
+           </li>
+          <li class="nav-item">
+          <a class="nav-link text-navbar" href="">Telephone<i class="fa-solid fa-headphones text-danger"></i></a>
+           </li>
+          
+      </ul>
+      <form class="d-flex" >
+       <div class="authentication">
+         {% if app.user %}
+       <a class="connexion" href="{{path("app_logout")}}">déconnxion <i class="fa-regular fa-user text-danger"></i></a>
+       {% else %}
+       <a class="connexion" href="{{path("app_login")}}">connexion <i class="fa-regular fa-user text-danger"></i></a>
+       {% endif %}
+       </div>
+      </form>
+    </div>
+  </div>
+</nav>

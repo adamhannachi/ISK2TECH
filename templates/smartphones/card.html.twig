@@ -1,0 +1,24 @@
+{% extends 'base_U.html.twig' %}
+
+{% block title %}card{% endblock %}
+{% block body %}
+
+   <div class="card">
+  <h6 class=" text-center ">{{smartPhones.nom}}</h6>  <!-- Nom de produit-->
+  <img  style ="width:150px; height:180px" src="{{vich_uploader_asset(smartPhones,'imageFile')}}" class="card-img-top" alt="..."> <!-- image de produit-->
+  <p>{{smartPhones.Capacite}} GO</p>  <!-- systemeExploitation de produit-->
+  <p class="text-danger ">{{smartPhones.prix | number_format(0,',',)}} <span class="text-dark">€</span></p>  <!-- prix de produit-->
+    <a class="btn-acherter mb-3 btn btn-success btn-sm" href="{{path("app_rajouter" , {id: smartPhones.id})}}">Ajouter au panier</a>
+   <span class="block-icons">
+      <a class="btnMessage" href="{{path("creer_commentaire")}}"><i class="fa-regular fa-comment-dots fa-beat-fade style-icons" style="color: #000000;"></i></a>
+      <a href="{{path('details_produits_smart',{id:smartPhones.id})}}"><i class="fa-solid fa-plus fa-fade style-icons" style="color: #126c02;"></i></a>
+      <a href="#"><i class="fa-regular fa-heart fa-beat-fade style-icons" style="color: #ff0000;"></i></a>
+    </span>
+    <div >
+    {% for c in smartPhones.smartPhoneCategorie %}
+    <em class="text-muted text-danger  text-italic">#{{c.nom}}</em>
+    {% endfor %}
+    </div>
+  </div> 
+{% endblock %}
+

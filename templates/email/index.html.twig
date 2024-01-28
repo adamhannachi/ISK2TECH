@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}gestion Email{% endblock %}
+
+{% block body %}
+
+  <h3>liste d'Email</h3>
+
+<table class="table text-center  container rounded ">
+ <label for="site-search"></label>
+<input class="barDeRecherche" type="search" id="site-search" name="q" placeholder="recherche..."/><i class="fa-solid fa-magnifying-glass"></i>
+  <thead >
+    <tr>
+    <th scope="col">#Id</th>
+      <th scope="col">Adresse email</th>
+      <th scope="col">Nom de famille</th>
+      <th scope="col">Numéro de télephone</th>
+     <th scope="col">sujet</th>
+     <th scope="col">contenu</th>
+     <th scope="col">date</th>
+      <th scope="col">option</th>
+    </tr>
+  </thead>
+  {% for Emails in Email %}
+  <tbody>
+    <tr>
+     <td> {{Emails.id}}</td>
+      <td>{{Emails.email}}</td>
+      <td>{{Emails.lastName}}</td>
+      <td>{{Emails.numberPhone}}</td>
+      <td>{{Emails.sujet}}</td>
+      <td>{{Emails.contenu}}</td>
+      <td>{{Emails.createAT|date("m/d/Y")}}</td>
+      <td cla="d-flex container">
+      <a class="bg-danger text-dark p-1 rounded bg-opacity-75 " href="{{path('delete_email',{id: Emails.id})}}">supprimer <i class="fa-solid fa-trash-can text-light ms-1"></i></a>
+      </td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+
+     {# display navigation #}
+<div class="navigation d-flex justify-content-center mt-3">
+    {{knp_pagination_render(Email)}}
+</div>
+{% endblock %}

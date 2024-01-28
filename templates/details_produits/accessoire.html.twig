@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page détails de produit{% endblock %}
+
+{% block body %}
+ 
+ 
+<div class="container text-center container-details-Produits">
+<h2 class="">Détails de produit</h2>
+  <div class="row">
+    <div class="col order-first zone-1">
+     <h5> {{Accessoire.nom}}</h5>
+     <img  style ="width:150px"src="{{vich_uploader_asset(Accessoire,'imageFile')}}" class="card-img-top" alt="...">
+     <img  src="" alt="image du produit" id="productImage"/>
+      <p>{{Accessoire.prix}}</p>
+      <div> <a href="" class="btn btn-primary btn-sm">Ajouter au panier</a></div>
+    </div>
+    <!---->
+    <div class="col zone-2">
+     <h3>caracterstique</h5>
+      <h5 class="text-start">Couleur</h3>
+      <div class="text-start text-light">{{Accessoire.couleur}}</div>
+      <hr>
+      <h5 class="text-start">description</h3>
+      <div class="text-start text-light mb-2">{{Accessoire.description}}</div>
+     
+   
+  </div>
+</div>
+
+{% endblock %}

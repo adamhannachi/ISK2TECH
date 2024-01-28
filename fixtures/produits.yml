@@ -1,0 +1,68 @@
+App\Entity\Categories:
+  categories_{1..3}:
+   nom: <creature()>
+  
+App\Entity\SmartPhone:
+  smartPhone_{1..100}:
+   nom: <Name()>
+   prix: <numberBetween(150,1800)>
+   taille_ecran: <text(20)>
+   systeme_exploitation: <text(20)>
+   photo_video: <text(10)>
+   batterie: <text(10)>
+   connectivite: <text(10)>
+   image: http://picsum.photos/id/<numberBetween(400, 800)>/290/180
+   smartPhoneCategorie: '<numberBetween(1,3)>x @categories_*'
+   
+  
+App\Entity\Ordinateur:
+  ordinateur_{1..100}:
+   nom: <Name()>
+   prix: <numberBetween(478,3200)>
+   taille_ecran: <text(20)>
+   systeme_exploitation: <text(20)>
+   photo_video: <text(10)>
+   batterie: <text(10)>
+   connectivite: <text(10)>
+   image: http://picsum.photos/id/<numberBetween(400, 800)>/290/180
+   ordinateurcategory: '<numberBetween(1,3)>x @categories_*'
+   
+App\Entity\Accessoires:
+  accessoires_{1..100}:
+   nom: <Name()>
+   prix: <numberBetween(25,988)>
+   couleur: <text(5)>
+   description: <text(100)>
+   image: http://picsum.photos/id/<numberBetween(400, 800)>/290/180
+   commande: '<numberBetween(1,2)>x @user_*'
+   
+
+App\Entity\ContactClient:
+  contactClient_{1..150}:
+   lastName: <lastName()>
+   email: '<email()>'
+   sujet: <text(5)>
+   numberPhone: <numberBetween(10)>
+   contenu: <text(35)>
+
+App\Entity\Likes:
+  likes_{1..150}:
+   numberlike: <numberBetween(1,25)>
+   
+
+App\Entity\Commentaires:
+  commentaires_{1..50}:
+   commentaire: <text(50)>
+   note: <numberBetween(1,5)>
+
+   
+App\Entity\User:
+  user_{1..50}:
+    email: <email()>
+    firstName: <firstName()>
+    last_name: <lastName()>
+    adresse_postale: <text(15)>
+    roles: [ROLE_USER]
+    password: <numberBetween(5,25)>
+    numberPhone: <numberBetween(10)>
+   

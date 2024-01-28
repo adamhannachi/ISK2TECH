@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page Accueil ISK2TECH{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+<div class="content">
+   <!-- titre de description de la page d'acceuil-->
+     <div class="text">
+       <h3 class="text-shop"><span class="text-light"> ISK</span>2<span class="text-danger">TECH</span><span class="text-light"> SmartPhone</span></h2>
+       <h4>tous produits de nouvelle technologie</h2>
+         <!-- paragraphe de description de la page d'acceuil-->
+        
+       <p class="text-light">Côté smartphone, retrouvez nos produits comme le Samsung Galaxy S23 ou l’iPhone 15 !
+        Parmi nos autres produits ISK2TECH, vous trouverez également : smartphone Android</p> 
+  
+         <a class="button-produits" href="#"> tous les produits</a>
+       
+     </div>
+ 
+  <!-- image  de la page d'acceuil-->
+     <div class="image">
+     <img style="width:250px; "class="img" src="{{ asset('images/0black_titanium__e5htsz029002_large_1-removebg-preview.png') }}" alt="iphone15 pro max">
+     </div> 
+  
+     </div>
+      <!-- image produit animation page d'accueil -->
+    
+<div class="icons">
+      <img onclick="phones(this.src); colors('#000000')"  src="{{ asset('images/0black_titanium__e5htsz029002_large_1-removebg-preview.png') }}" alt="iphone 15">
+      <img onclick="phones(this.src); colors('#86decc')"  src="{{ asset('images/1blue__daqp9wegmiy6_large_2x-removebg-preview.png') }}" alt="iphone 15">
+      <img onclick="phones(this.src); colors('#e6aad2')"  src="{{ asset('images/2pink__fxslpxkvshqy_large_2x-removebg-preview.png') }}" alt="iphone 15">
+     
+</div>
+    
+</div>
+    
+     <!--titre led iphone-->
+      <div  class= "textIphone  " >  
+     <span class="lightbar"></span>
+        <h3 class="iphone"> Iphone <i class="fa-brands fa-apple  "></i> </h3> 
+         <h4 class="text-light "> <span>15</span> Pro Max</h4>
+     </div>
+     <!-- container ordinateur portable -->
+     <div class=" ordinateurPortable container "  >
+        <h3 class="text-ordinateur" > ORDINATEURS PORTABLE
+        <!--image logo hp-->
+         <span  class="image-ordinateur"> <img style=" width:150px;" src="{{asset('images/hp_metal_logo-Digital_HD_Wallpaper_1920x1080-removebg-preview.png')}}"></img>
+       </span> </h3>
+         <!-- image principale de ordinateur-->
+         <div class="détails-ordinateur">
+           <img class="Ordinateur-img1"  style="width:350px;" src="{{asset('images/7Q8A3EA-ABF_5_1750x1285-removebg-preview.png')}}" alt="">
+          
+           <p class="détails">HP Spectre x360 16-f2022nf
+                                     Haute performance. Notre Spectre le plus puissant est le fruit d'une
+                                     conception et d'un savoir-faire époustouflants. <br>  <br>             
+                               <span class="text-danger bg-warning-subtle">1 899,00€ TTC </span><br> <br> 
+                               <span>Système d'exploitation | <span class="performance"> Windows 11 Famille, </span>
+                                     Processeur | <span class="performance"> Intel® Core™ i7 13700H (13ème génération) </span><br>
+                                     Mémoire |<span class="performance"> 16 Go RAM </span><br>
+                                     Stockage | <span class="performance"> 512 Go Disque SSD </span><br>
+                                     Écran | <span class="performance"> 40,6 cm (16 pouces), 3K+ (3072 x 1920), écran tactile </span><br>
+                                     Carte graphique | <span class="performance"> Carte graphique Intel® Iris® Xᵉ </span></span></p>
+              
+         </div>
+         <a  class="prevOrdinateur "src=""><i class="fa-solid fa-circle-chevron-left fa-beat-fade fa-lg" style="color:#000000;"></i></a>
+         <div class="slider-ordinateur" >
+            <img class="show" style="width:150px;" src="{{asset('images/7Q8A3EA-ABF_4_1750x1285-removebg-preview.png')}}" alt="">
+            <img  style="width:150px;" src="{{asset('images/7Q8A3EA-ABF_1750x1285_1_-removebg-preview.png')}}" alt="">
+            <img  style="width:150px;" src="{{asset('images/c07760974_1750x1285-removebg-preview.png')}}" alt="">
+            <img  style="width:150px;" src="{{asset('images/7Q8A3EA-ABF_8_1750x1285-removebg-preview.png')}}" alt="">
+            <img  style="width:150px;" src="{{asset('images/7Q8A3EA-ABF_5_1750x1285-removebg-preview.png')}}" alt="">
+          </div>
+
+             
+             <a  class="suivOrdinateur" src=""><i class="fa-solid fa-circle-chevron-right fa-beat-fade fa-lg" style="color: #000000;"></i></a>
+              <!-- contacte service -->
+                 <div class="contact-services">
+                     <a class="text-light" style="font-size:15px"; href="tel:+07.49.55.31.21"> <i class="fa-solid fa-phone fa-flip" style="color: #ffff00;"></i>Numéro de Teléphone: (07.49.55.31.21) </a>
+                     <a class="text-light adresse-email" style="font-size:15px"; href="mailto:Isk-tech@gmail.com"><i class="fa-solid fa-at fa-flip" style="color: #ffff00;"></i> Adresse Email: Isk-tech@gmail.com</a>
+                     <a class=" text-light adresse-email" style="font-size:15px";><i class="fa-solid fa-location-dot fa-flip" style="color: #ffff00;"></i>Aderesse-postale: 35 Rue Sambin 21000 Dijon</a> 
+                    
+                 </div>
+         </div>
+  <div class="container-textAccessoires ">
+ <h3 class="text-assecoire" >tous type D'accessoires </h3></div>
+<!-- slider 3d animer -->
+  <div class="slider container ">
+   
+   <div class="item row">
+   
+   <h4>Iphone 15 pro</h3>
+   <img  class="image-slider" src="{{asset('images/ea7e40dcf0_iphone-15-pro-removebg-preview.png')}}" alt="">
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magni voluptas
+   maiores molestias at voluptate repudiandae</p>
+   <a class="link-slider" href="">savoir plus</a>
+   </div>
+  <!---->
+    <div class="item row">
+   <h4>Ordinateur Samsung</h3>
+   <img  class="image-slider"  src="{{asset('images/Quel-est-cet-ordinateur-portable-que-Samsung-brade-sur-son-site-550-1677434-removebg-previe.png')}}" alt="">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magni voluptas
+   maiores molestias </p>
+  <a class="link-slider" href="">savoir plus</a>
+   </div>
+
+     <div class="item row">
+   <h4>slide 3</h3>
+   <img  class="image-slider" src="{{asset('images/5232e5f1-ae73-4df5-9bf3-e0fe05c7aff6-1_e04df03d-776b-4201-b2bf-8f07a07f01d0-removebg-preview.png')}}" alt="">
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magni voluptas
+   maiores molestias at voluptate repudiandae</p>
+   <a class="link-slider" href="">savoir plus</a>
+   </div>
+
+     <div class="item row">
+   <h4>slide 4</h3>
+   <img  class="image-slider" src="{{asset('images/dc2ee476-16f3-453b-9ff3-c1511d6c0a65-1_11d15677-6b4b-470a-afd8-af11939691d4-removebg-preview.png')}}" alt="">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magni voluptas
+   maiores molestias at voluptate repudiandae</p>
+   <a class="link-slider" href="">savoir plus</a>
+   </div>
+
+      <div class="item row ">
+   <h4>slide 5</h3>
+   <img  class="image-slider" src="" alt="">
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magni voluptas
+   maiores molestias at voluptate repudiandae</p>
+    <a class="link-slider" href="">savoir plus</a>
+   </div>
+
+       <div class="item row">
+   <h4>slide 6</h3>
+   <img  class="image-slider" src="" alt="">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magni voluptas
+   maiores molestias at voluptate repudiandae</p>
+   <a class="link-slider" href="">savoir plus</a>
+   </div>
+
+       <div class="item row">
+   <h4>slide 7</h3>
+   <img  class="image-slider" src="" alt="">
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magni voluptas
+   maiores molestias at voluptate repudiandae</p>
+   <a class="link-slider" href="">savoir plus</a>
+   </div>
+
+   <button id="next">></button>
+   <button id="prev"><</button>
+  </div>
+
+
+{% endblock %}

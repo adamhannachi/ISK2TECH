@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+         <!-- script jquery slider-->
+         <script defer src="{{asset('assets/js/jquery-3.7.1.min.js')}}"></script>
+     
+
+  
+<!-- feuilles de styles-->
+        
+      <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+            {% block stylesheets %}{% endblock %}
+		
+        <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+<!-- fichier JS-->
+       <script defer  src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+            {% block javascripts %}{% endblock %}
+
+       <script defer src="{{asset('assets/js/main.js')}}"></script>
+
+    </head>
+    <body>
+    
+        {% block body %}
+        
+        
+        {% endblock %} 
+     
+    </body>  
+</html>

@@ -1,0 +1,46 @@
+{% extends 'base_U.html.twig' %}
+
+{% block body %}
+    
+    <div class=" row container-filter ">
+     <div class="row">
+     <div class=" container w-50 mt-5">
+    {{form_widget(form.q)}}
+    </div>
+    <a id="filter-click" class="link-filter text-center" href=""><i class="fa-sharp fa-solid fa-bars text-warning"></i> Filter</a>
+    <div class=" modale-filter">
+   {{form_start(form, {attr: {class: 'filter'}})}}
+     
+<div class="d-flex">
+     <div  class="w-50 me-3 " >
+     <h6 class=" placeholder-filter">Prix minumum</h4>
+       {{form_row(form.min)}}
+     </div> 
+
+     <div class="w-50 me-3">
+      <h6 class=" placeholder-filter">Prix maximum</h4>
+       {{form_row(form.max)}}
+     </div> 
+
+<div class="w-50 me-3">
+      <h6 class=" placeholder-filter"> Modele de Telephone </h4>
+       {{form_row(form.nom)}}
+     </div> 
+<div  class="w-50 ">
+       <h6 class=" placeholder-filter"> Capacité</h4>
+       {{form_row(form.Capacite)}}
+     </div> 
+</div>
+<hr>
+      <div class="w-75  d-flex ">
+       {{form_row(form.smartPhoneCategorie)}}
+     </div> 
+
+     <div  class="d-flex justify-content-center mb-2">
+      <button type ="submit" class="btn-filter  ">filtrer</button>
+     </div> 
+
+    {{ form_end(form) }}
+    </div>
+  </div>
+{% endblock %}

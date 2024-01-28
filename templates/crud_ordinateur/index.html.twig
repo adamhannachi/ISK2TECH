@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page-crudSmarthphone{% endblock %}
+
+{% block body %}
+
+  <h3 class="text-center"> Liste des Ordinateurs</h3>
+
+<table class="table text-center  container rounded ">
+  <thead >
+    <tr>
+     <th scope="col">#id</th>
+      <th scope="col">Model de telephone</th>
+      <th scope="col">prix</th>
+      <th scope="col">photo</th>
+     <th scope="col">date de creation</th>
+     <th scope="col">Option</th>
+    </tr>
+  </thead>
+   {% for ordinateurs in ordinateur %}
+  <tbody>
+    <tr>
+    <td>{{ordinateurs.id}}</td>
+      <td>{{ordinateurs.nom}}</td>
+      <td>{{ordinateurs.prix | number_format(0,',',)}}</td>
+      <td><img  style ="width:50px"src="{{vich_uploader_asset(ordinateurs,'imageFile')}}" class="card-img-top" alt="..."></td>
+      <td>Cell</td>
+      <td cla="d-flex container">
+      <a class="bg-success text-dark p-1 rounded bg-opacity-75 me-1" href="{{path('modifier_ordinateur',{id: ordinateurs.id})}}">modifier <i class="fa-regular fa-pen-to-square text-light ms-1"></i></a>
+      <a class="bg-danger text-dark p-1 rounded bg-opacity-75 " href="{{path('delete_ordinateur',{id: ordinateurs.id})}}">supprimer <i class="fa-solid fa-trash-can text-light ms-1"></i></a>
+      <a class="bg-dark text-light p-1 rounded bg-opacity-75 " href="{{path("creer_ordinateur")}}">créer<i class="fa-solid fa-trash-can text-light ms-1"></i></a>
+      </td>
+    </tr>
+   
+  </tbody>
+ {% endfor %}
+</table>
+
+     {# display navigation #}
+<div class="navigation d-flex justify-content-center mt-3">
+    {{knp_pagination_render(ordinateur)}}
+</div>
+{% endblock %}
